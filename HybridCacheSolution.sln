@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11205.157 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache", "HybridCache\HybridCache.csproj", "{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.ApiTest", "HybridCache.ApiTest\HybridCache.ApiTest.csproj", "{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {878EB094-D0A7-41F5-A8A0-B97C0D2C290A}
+	EndGlobalSection
+EndGlobal
