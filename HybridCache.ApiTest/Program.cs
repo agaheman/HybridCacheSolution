@@ -1,12 +1,30 @@
+using HybridCache.ApiTest.Models;
+using HybridCache.Extensions;
 using HybridCache.Options;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddMemoryCache();
-builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect("10.100.7.56:6379,connectRetry=5"));
+// ── Infrastructure ────────────────────────────────────────────────────────────
 
-builder.Services.Configure<HybridCacheOptions>(builder.Configuration.GetSection("HybridCache"));
+builder.Services.AddMemoryCache();
+
+// Fix: Redis connection string sourced from configuration, not hardcoded
+var redisConnectionString = builder.Configuration.GetConnectionString("Redis")
+    ?? throw new InvalidOperationException("Redis connection string 'Redis' is not configured.");
+
+builder.Services.AddSingleton<IConnectionMultiplexer>(
+    ConnectionMultiplexer.Connect(redisConnectionString));
+
+// ── HybridCache ───────────────────────────────────────────────────────────────
+
+builder.Services.Configure<BrdpHybridCacheOptions>(
+    builder.Configuration.GetSection("HybridCache"));
+
+// Registers: IHybridCache<T>, IHybridCacheSerializer<T>, InvalidationListener, OptionsValidator
+builder.Services.AddHybridCache<CacheToken>();
+
+// ── API ───────────────────────────────────────────────────────────────────────
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

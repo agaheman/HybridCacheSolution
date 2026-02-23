@@ -1,10 +1,17 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.0.11205.157 d18.0
+VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache", "HybridCache\HybridCache.csproj", "{28CF6F55-EC68-7EBB-25FD-AA58ED6DFB11}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HybridCache.ApiTest", "HybridCache.ApiTest\HybridCache.ApiTest.csproj", "{8C7AD75A-5AF1-3AEF-6391-FAA6BEA9B2B2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{86398ECA-ACA4-4E5A-A75A-2D8762ED92AC}"
+	ProjectSection(SolutionItems) = preProject
+		Solution Items\ADR.md = Solution Items\ADR.md
+		Solution Items\README.md = Solution Items\README.md
+		Solution Items\SPEC.md = Solution Items\SPEC.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
